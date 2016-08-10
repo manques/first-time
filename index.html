@@ -12,44 +12,46 @@
 			<li>fristChild</li>
 			<li>lastChild</li>
 		</ul>
+
+		<button onclick="child_nodes()">Get childNodes</button>
+		<div id="cn"></div>
+		<button onclick="children1()">Get chidren</button>
+		<div id="c"></div>
+		<button onclick="frist_child()">Get fristChild</button>
+		<div id="fc"></div>
+		<button onclick="last_child()">Get lastChild</button>
+		<div id="lc"></div>
 		<script>
 		
 			function child_nodes(){
 				var childNodes=document.body.childNodes;
-				var output;
+				var output="";
 				for(var i=0;i<childNodes.length;i++){
-					output=document.getElementbyId("cn").innerHTML;
-					document.getElementbyId("cn").innerHTML=output+childNodes;
+					output=document.getElementById("cn").innerHTML;
+					document.getElementById("cn").innerHTML=i+" "+output+childNodes+"<br/>";
 				}
 			}
-			function children(){
+			function children1(){
 				var children=document.body.children;
-				var output;
+				var output="";
 				for(var i=0;i<children.length;i++){
-					output=document.getElementbyId("c").innerHTML;
-					document.getElementbyId("c").innerHTML=output+children;
+					output=document.getElementById("c").innerHTML;
+					document.getElementById("c").innerHTML=i+" "+output+children+"<br/>";
 				}
 			}
 			function frist_child(){
 				var fristChild=document.body.fristChild;
 				
-					document.getElementbyId("fc").innerHTML=fristChild;
+					document.getElementById("fc").innerHTML=i+" "+fristChild+"<br/>";
 				
 			}
 			function last_child(){
 				var lastChild=document.body.lastChild;
 				
-					document.getElementbyId("fc").innerHTML=lastChild;
+					document.getElementById("fc").innerHTML=i+" "+lastChild+"<br/>";
 				
 			}
 		</script>
-		<button onclick="child_nodes">Get childNodes</button>
-		<div id="cn"></div>
-		<button onclick="children">Get chidren</button>
-		<div id="c"></div>
-		<button onclick="frist_child">Get fristChild</button>
-		<div id="fc"></div>
-		<button onclick="last_child">Get lastChild</button>
-		<div id="lc"></div>
+
 	</body>
 </html>
