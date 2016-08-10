@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<title>child node</title>
+	</head>
+	<body>
+	    <div>child</div>
+	    <!-- different way to acess  child from parent-->
+		<ul>
+			<li>childNodes</li>
+			<li>children</li>
+			<li>fristChild</li>
+			<li>lastChild</li>
+		</ul>
+		<script>
+		
+			function child_nodes(){
+				var childNodes=document.body.childNodes;
+				var output;
+				for(var i=0;i<childNodes.length;i++){
+					output=document.getElementbyId("cn").innerHTML;
+					document.getElementbyId("cn").innerHTML=output+childNodes;
+				}
+			}
+			function children(){
+				var children=document.body.children;
+				var output;
+				for(var i=0;i<children.length;i++){
+					output=document.getElementbyId("c").innerHTML;
+					document.getElementbyId("c").innerHTML=output+children;
+				}
+			}
+			function frist_child(){
+				var fristChild=document.body.fristChild;
+				
+					document.getElementbyId("fc").innerHTML=fristChild;
+				
+			}
+			function last_child(){
+				var lastChild=document.body.lastChild;
+				
+					document.getElementbyId("fc").innerHTML=lastChild;
+				
+			}
+		</script>
+		<button onclick="child_nodes">Get childNodes</button>
+		<div id="cn"></div>
+		<button onclick="children">Get chidren</button>
+		<div id="c"></div>
+		<button onclick="frist_child">Get fristChild</button>
+		<div id="fc"></div>
+		<button onclick="last_child">Get lastChild</button>
+		<div id="lc"></div>
+	</body>
+</html>
