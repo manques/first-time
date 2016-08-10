@@ -9,7 +9,7 @@
 		<ul>
 			<li>childNodes</li>
 			<li>children</li>
-			<li>fristChild</li>
+			<li>firstChild</li>
 			<li>lastChild</li>
 		</ul>
 
@@ -17,7 +17,7 @@
 		<div id="cn"></div>
 		<button onclick="children1()">Get chidren</button>
 		<div id="c"></div>
-		<button onclick="frist_child()">Get fristChild</button>
+		<button onclick="first_child()">Get firstChild</button>
 		<div id="fc"></div>
 		<button onclick="last_child()">Get lastChild</button>
 		<div id="lc"></div>
@@ -39,16 +39,16 @@
 					document.getElementById("c").innerHTML=i+" "+output+children+"<br/>";
 				}
 			}
-			function frist_child(){
-				var fristChild=document.body.fristChild;
+			function first_child(){
+				var firstChild=document.body.firstChild;
 				
-					document.getElementById("fc").innerHTML=i+" "+fristChild+"<br/>";
+					document.getElementById("fc").innerHTML=" "+firstChild+"<br/>";
 				
 			}
 			function last_child(){
 				var lastChild=document.body.lastChild;
 				
-					document.getElementById("fc").innerHTML=i+" "+lastChild+"<br/>";
+					document.getElementById("lc").innerHTML=" "+lastChild+"<br/>";
 				
 			}
 		</script>
